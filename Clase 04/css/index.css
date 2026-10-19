@@ -1,0 +1,21 @@
+h1 {
+    color: white;
+    background-color: red;
+    font-family: Futura;
+    font-size: 100px;
+    font-weight: 200;
+    text-align: center;
+}
+
+.azul {
+    color: blue;
+}
+
+
+li {
+    background-color: lightblue;
+}
+
+dl {
+    background-color: lightgreen;
+}
