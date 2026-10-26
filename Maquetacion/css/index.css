@@ -10,11 +10,14 @@ img {
     max-width: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: inherit; /*pone el color heredado, que siempre es negro*/
+}
 
 
 
-
-
+/************ NIVEL FÁCIL ************/
 /************ A ************/
 
 .a {
@@ -23,13 +26,14 @@ img {
 }
 
 .a__block {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 16px;
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 16px;
     gap: 48px;
-    margin: 0 auto;
-    max-width: 920px;
 }
 
 .a__image {
@@ -46,8 +50,8 @@ img {
 
 
 h2 {
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 32px;
+    font-weight: 500;
 }
 
 
@@ -85,7 +89,7 @@ p {
     gap: 16px;
     background-color: #fff;
 
-    flex: 1 1 200px;  /** Se activa con el flex-wrap: wrap; que se pone en el padre**/
+    flex: 1 1 200px;  /* Se activa con el flex-wrap: wrap; que se pone en el padre */
 }
 
 .b__image {
@@ -128,15 +132,234 @@ h3 {
     flex-direction: column;
     padding: 16px;
     gap: 16px;
-    background-color: #fff;
 
     flex: 1 1 300px;
 }
 
 .btn {
-    padding: 16px;
-    border-radius: 999px;
-    background-color: black;
+    padding: 16px 32px;
+    background-color: #000;
+    border-radius: 100px;
     color: #fff;
-    text-decoration: none;
+
+    /* Se estira porque por defecto el eje secundario del flex pone el stretch */
+
+    align-self: start;
+
+    /*Se puede arreglar con align-self: start; o poniendole al padre, en este caso .c__block -> align-items: start; */
+
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+
+/************ D ************/
+
+.d {
+    padding: 48px 0;
+    background-color: #FBFBFB;
+}
+
+.d__block {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;  
+}
+
+.d__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.d__cards {
+    display: flex;
+    gap: 16px;
+    padding: 16px 0;
+
+    flex-wrap: wrap;
+}
+
+.d__card {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+    flex: 1 1 300px;
+}
+
+h4 {
+   font-size: 19px;
+   font-weight: 500; 
+}
+
+.d__foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+
+
+
+/************ NIVEL MEDIO ************/
+/************ E ************/
+.e {
+    padding: 48px 0;
+    background-color: #FBFBFB;
+}
+
+.e__block {
+    max-width: 920px;
+    margin: auto;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.e__content {
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.e__texts {
+    padding: 16px 0;
+    display: flex;
+    gap: 16px;
+
+    flex-wrap: wrap;
+}
+
+.e__text {
+    flex: 1 1 300px; 
+    /*Se pone en el elemento que esta dentro del flex*/
+    /* Sirve para indicar que aunque haya menos texto en uno, ambos ocupen el mismo espacio */
+    /* Tambíen acompañado de flex-wrap: wrap; hace que cuando no quepan en la pantalla se pongan uno encima del otro */
+}
+ 
+
+
+
+/************ F ************/
+
+.f {
+    padding: 48px 0;
+    background-color: #FBFBFB;
+}
+
+
+.f__block {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+
+.f__images {
+    display: flex;
+    gap: 16px;
+}
+
+
+.f__content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.f__content1 {
+    padding: 16px 0;
+    display: flex;
+    gap: 16px;
+
+    flex-wrap: wrap;
+}
+
+.f__text {
+    flex: 1 1 300px;
+}
+
+.f__content2 {
+    padding: 16px 0;
+    display: flex;
+    gap: 16px;
+
+    flex-wrap: wrap;
+}
+
+.f__text2 {
+    flex: 1 1 300px;
+}
+
+.btn2 {
+    padding: 16px 32px;
+    background-color: #000;
+    border-radius: 100px;
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    flex: 1 1 300px;
+
+    align-self: center;  /* Para quitar el stretch que viene por defecto */
+    text-align: center;
+}
+
+
+/************ G ************/
+
+.g {
+    padding: 48px 0;
+    background-color: #FBFBFB;
+}
+
+.g__block {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.g__cards {
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+}
+
+.g__card {
+    background-color: #F0F0F0;
+}
+
+.g__head {
+
+}
+
+.g__foot {
+
 }
