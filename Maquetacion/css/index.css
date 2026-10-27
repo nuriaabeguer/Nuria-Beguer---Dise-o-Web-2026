@@ -278,6 +278,12 @@ h4 {
 .f__images {
     display: flex;
     gap: 16px;
+
+    flex-wrap: wrap;
+}
+
+.f__image {
+    flex: 1 1 300px;
 }
 
 
@@ -289,7 +295,7 @@ h4 {
 }
 
 
-.f__content1 {
+.f__row {
     padding: 16px 0;
     display: flex;
     gap: 16px;
@@ -301,19 +307,9 @@ h4 {
     flex: 1 1 300px;
 }
 
-.f__content2 {
-    padding: 16px 0;
-    display: flex;
-    gap: 16px;
+.btn.f__text { 
+    /* Es una clase anindada (todo junto sin espacios es un elemento con ambas clases al mismo tiempo. En HTML si se pone espaacio). Solo afecta al boton que tiene esas 2 clases, no al resto que tiene class="btn" */
 
-    flex-wrap: wrap;
-}
-
-.f__text2 {
-    flex: 1 1 300px;
-}
-
-.btn2 {
     padding: 16px 32px;
     background-color: #000;
     border-radius: 100px;
@@ -327,6 +323,10 @@ h4 {
     align-self: center;  /* Para quitar el stretch que viene por defecto */
     text-align: center;
 }
+
+
+
+
 
 
 /************ G ************/
@@ -347,19 +347,118 @@ h4 {
 }
 
 .g__cards {
-    padding: 16px;
+    padding: 16px 0;
     display: flex;
     gap: 16px;
+
+    flex-wrap: wrap;
 }
 
 .g__card {
     background-color: #F0F0F0;
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    flex: 1 1 250px;
+    /* grow - shrink - basis */
 }
 
 .g__head {
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .g__foot {
+    padding: 16px 0;
 
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
 }
+
+.icon {
+    font-size: 24px;
+}
+
+
+
+
+
+
+/************ H ************/
+
+.h {
+    padding: 48px 0;
+    background-color: #FBFBFB;
+}
+
+.h__block {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.h__content {
+    padding: 16px 0;
+
+    display: flex;
+    gap: 16px;
+
+    flex-wrap: wrap;
+}
+
+.h__column {
+    background-color: #F0F0F0;
+    
+    flex: 1 1 300px;
+}
+
+.h__column_text {
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.h__rows {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    flex: 1 1 300px;
+}
+
+.h__row {
+    padding: 24px;
+    background-color: #F0F0F0;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    flex: 1 1;
+}
+
+.h__row_text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.h__foot {
+    padding: 16px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
