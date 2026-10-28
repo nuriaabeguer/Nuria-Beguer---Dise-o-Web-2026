@@ -418,10 +418,11 @@ h4 {
 .h__column {
     background-color: #F0F0F0;
     
-    flex: 1 1 300px;
+    flex: 1 1 300px; 
+    /*Asi tanto column como row ocupan lo mismo, y no pueden medir menos de 300px */
 }
 
-.h__column_text {
+.h__column__text {
     padding: 32px;
 
     display: flex;
@@ -442,13 +443,15 @@ h4 {
     background-color: #F0F0F0;
 
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 16px;
 
-    flex: 1 1;
+    flex: 1 1; 
+    /* Aqio solo es necesario flex-grow y flex-shrink. Indicar a los elementos cuando debe abarcar. Con 1, ambos se reparten el espacio por igual*/
 }
 
-.h__row_text {
+.h__row__text {
     display: flex;
     flex-direction: column;
     gap: 16px;

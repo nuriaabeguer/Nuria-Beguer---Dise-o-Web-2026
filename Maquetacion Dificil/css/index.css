@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* :root {} Es como un armario. Permite crear un cajon en ese armario para que tenga un estilo determinado.*/
+:root {
+    /***** COLORES *****/
+    --color-grey: #606060;
+    --color-light-gray: #F0F0F0;
+    --color-bg: #FBFBFB;
+
+    /***** SPACE *****/
+    --space-xxs: 8px;
+    --space-xs: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-xxl: 64px;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+
+/*************** COMPONENTS ***************/
+
+h1, h2, h3, h4, h5, h6, p, a, span {
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.big {
+    color: var(--color-grey);
+    font-size: 18px;
+}
+
+.eyebrow {
+    color: var(--color-grey);
+    font-size: 13px;
+    font-weight: 400;
+
+    text-transform: uppercase;
+}
+
+.small {
+    color: var(--color-grey);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.btn {
+    background-color: #000;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 73px;
+
+    font-size: 15px;
+
+    display: inline-block;
+}
+
+.menu-link {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.link {
+    font-weight: 500;
+    font-size: 15px;
+
+    display: inline-flex;
+    gap: var(--space-xxs);
+    align-items: center;
+}
+
+.block {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+
+
+
+/*************** HEADER ***************/
+
+.header{
+    padding: var(--space-md);
+    background-color: var(--color-bg);
+}
+
+.header__block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    max-width: 75px;
+}
+
+.header__menu {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+
+
+/*************** HERO ***************/
+
+.hero {
+
+}
+
+.hero__block {
+
+}
+.hero__content {
+
+}
+
+.hero__content__text {
+
+}
+
+.eyebrow {
+
+}
+
+.ero__btns {
+
+}
+
+.hero__content__img {
+
+}
+
+.hero__foot {
+
+}
