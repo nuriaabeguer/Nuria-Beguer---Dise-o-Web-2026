@@ -363,7 +363,7 @@ p {
     display: flex;
     gap: var(--space-md);
 
-    flex: 1 1;
+    flex-grow: 1; /*Para que ocupe todo el alto de la caja*/
 }
 
 .section3__row__text {
@@ -455,3 +455,7 @@ p {
     display: flex;
     gap: var(--space-md);
 }
+
+
+
+
