@@ -15,6 +15,10 @@
     --space-lg: 32px;
     --space-xl: 48px;
     --space-xxl: 64px;
+
+
+    /***** GRID *****/
+    --grid-2col: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 
@@ -371,6 +375,64 @@ p {
     flex-direction: column;
     gap: var(--space-xs);
 }
+
+
+
+
+
+/*************** SECTION 3 (GRID) ***************/
+
+.seccion3 {
+    padding: var(--space-xxl) var(--space-md);
+    background-color: var(--color-bg);
+}
+
+.seccion3__grid {
+    display: grid;
+    grid-template-columns: var(--grid-2col);
+
+    gap: var(--space-xs);
+}
+
+.seccion3__elem {
+    background-color: var(--color-light-gray);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.seccion3__elem {
+    padding: var(--space-lg);
+
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-md);
+}
+
+.seccion3__elem__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.tarjeta1 {
+    grid-row: 1/3;
+
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.tarjeta1__content {
+    padding: var(--space-lg);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
 
 
 

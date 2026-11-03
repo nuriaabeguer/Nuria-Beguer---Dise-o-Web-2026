@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    background-color: goldenrod;
+    padding: 10px;
+
+    display: grid;
+    gap: 5px; /* Solo funciona en grid o en flex*/
+
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 200px;
+}
+
+.grid__elem {
+    background-color: aquamarine;
+    display: flex; /*dentro de un grid se puede usar flex*/
+    justify-content: center;
+    align-items: center;
+
+    /*grid-column: 1/2; cuenta las lineas de la tabla, no las celdas, en este caso ocupa solo la primera celda
+    grid-column: span 2; en este caso ocupa 2 celdas*/
+}
+
+.jaimito {
+    background-color: black;
+    color: white;
+
+    grid-column: 2/3; /* se coloca entre la lina 2 y 3, osea la segunda celda*/
+    grid-row: span 2; /* se expande 2 filas*/
+}
