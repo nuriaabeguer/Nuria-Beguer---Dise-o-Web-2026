@@ -106,11 +106,35 @@ ul {
     color: #fff;
     padding: 16px 32px;
     border-radius: 73px;
+    border: 1px solid transparent; /*Se pone siempre para que luego el hover no mueva los elementos*/
 
     font-size: 15px;
 
     display: inline-block;
+
+
+    &:hover { /*Aqui no hay espacio con el &, porque no habria espacio escrito normal, seria .btn:hover no .btn :hover*/
+
+        background-color: transparent;
+        color: black;
+        border-color: black;
+    }
+
+
+    &:active {
+        background-color: var(--color-grey);
+        transform: scale(0.9); /* 1 es el estado normal*/
+    }
+
+
+    /*Pide dos valores: que propiedad quieres transicionar y en cuanto tiempo. Por defecto la propiedad es: all*/
+    transition: background-color 300ms, color 300ms, border-color 300ms, transform: 500ms;
+    
+    transition-timing-function: cubic-bezier(.25,.1,.04,1.51);
+    /*transition-delay: 10ms;*/
+
 }
+
 
 .menu-link {
     font-weight: 400;
@@ -165,36 +189,38 @@ ul {
 .hero {
     padding: var(--space-xxl) var(--space-md);
     background-color: var(--color-bg);
+
+    & .hero__block {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xl);
+
+        & .hero__content {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xl);
+
+            flex-wrap: wrap;
+
+            & .hero__content__text {
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-md);
+
+                flex: 1 1 300px;
+            }
+
+            & .hero__btns {
+                display: flex;
+                padding-top: var(--space-xxs);
+                gap: var(--space-md);
+            }
+        }
+    }
 }
 
-.hero__block {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xl);
-}
-
-.hero__content {
-    display: flex;
-    align-items: center;
-    gap: var(--space-xl);
-
-    flex-wrap: wrap;
-}
-
-.hero__content__text {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-
-    flex: 1 1 300px;
-}
 
 
-.hero__btns {
-    display: flex;
-    padding-top: var(--space-xxs);
-    gap: var(--space-md);
-}
 
 .hero__content__img {
     display: flex;
@@ -254,6 +280,33 @@ ul {
     gap: var(--space-md);
 
     flex: 1 1 250px;
+
+    /*
+    &:first-child {
+        background-color: lightblue;
+        color: white;
+    }
+
+    &:last-child {
+        background-color: lightblue;
+        color: white;
+    }
+
+    &:nth-child(2) {
+        background-color: burlywood;
+        color: white;
+    }
+    */
+
+    /*Para poner uno si uno no even -> pares, odd -> impares*/ 
+    &:nth-child(odd) {
+        background-color: burlywood;
+        color: white;
+
+        & .eyebrow, .small {
+            color: white;
+        } /*Dentro de los pares, todos los eyebrow y todos los small van a ser blancos*/
+    } 
 }
 
 .section1__card__text {
