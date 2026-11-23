@@ -1,0 +1,95 @@
+/*
+div {
+    animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function: ; Curvas de animacion
+    animation-delay: ;
+    animation-iteration-count: infinite; Hacer la animacion infinita
+    animation-fill-mode: ; Como quieres que acabe la animacion. Con forwards se queda en el ultimo frame
+    animation-direction: alternate; Hace un ping-pong
+}
+*/
+
+
+@keyframes move {
+    0% {
+        transform: translateY(0) rotate(0);
+        background-color: coral;
+        border-radius: 100px;
+    }
+
+    25% {
+        transform: translateY(10rem) rotate(0);
+        background-color: coral;
+        border-radius: 100px;
+    }
+
+    50% {
+        transform: translateY(-10rem) rotate(0);
+        background-color: coral;
+        border-radius: 0;
+    }
+
+    75% {
+        transform: translateY(0) rotate(90deg);
+        background-color: white;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(0) rotate(0);
+        background-color: coral;
+        border-radius: 100px;
+    }
+}
+
+
+@keyframes background {
+    0% {
+        background-color: white;
+    }
+    25% {
+        background-color: white;
+    }
+    50% {
+        background-color: white;
+    }
+    75% {
+        background-color: coral;
+    }
+    100% {
+        background-color: white;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+    animation-name: background;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+div {
+    min-height: 80px;
+    width: 80px;
+    background-color: coral;
+    border-radius: 100px;
+
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
