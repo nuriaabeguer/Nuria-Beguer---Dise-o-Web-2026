@@ -93,3 +93,17 @@ div {
     animation-iteration-count: infinite;
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+div::before {
+    content: "Hola ";
+    color: blue;
+}
+
+div::after {
+    content: "pepino";
+}
+
+div {
+    &::before {}
+    &::after {}
+}
